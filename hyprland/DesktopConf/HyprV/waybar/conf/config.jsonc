@@ -12,7 +12,7 @@
         "custom/lock_screen",
         "wlr/taskbar"
     ],
-    "modules-center":[
+    "modules-center": [
         "hyprland/workspaces",
         "clock"
     ],
@@ -24,36 +24,29 @@
         "pulseaudio",
         "pulseaudio#microphone",
         "backlight",
-        "tray",
+        "tray"
     ],
-    
     "custom/launch_wofi": {
         "format": "",
         "on-click": "pkill wofi || wofi -n -c ~/.config/HyprV/wofi/config-bmenu",
         "tooltip": false
     },
-    
     "clock": {
         "format": "{:%I:%M, %B %e %Y}"
     },
-
     "custom/power_btn": {
         "format": "",
         "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
         "tooltip": false
     },
-
-
     "custom/lock_screen": {
         "format": "",
         "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
         "tooltip": false
     },
-
     "hyprland/workspaces": {
         "format": "{name}"
     },
-
     "wlr/taskbar": {
         "format": "{icon}",
         "icon-size": 16,
@@ -65,7 +58,6 @@
             "wofi"
         ]
     },
-
     "cpu": {
         "interval": 10,
         "format": "",
@@ -74,7 +66,6 @@
         "format-alt": " {usage}%",
         "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
     },
-
     "memory": {
         "interval": 30,
         "format": "",
@@ -85,7 +76,6 @@
         "tooltip-format": "Memory - {used:0.1f}GB used",
         "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
     },
-    
     "disk": {
         "interval": 30,
         "format": "󰋊",
@@ -96,7 +86,6 @@
         "tooltip-format": "HDD - {used} used out of {total} on {path} ({percentage_used}%)",
         "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
     },
-
     "pulseaudio": {
         "format": "{icon}",
         "format-muted": "",
@@ -112,12 +101,15 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "tooltip": true,
         "tooltip-format": "{icon} at {volume}%"
     },
-
     "pulseaudio#microphone": {
         "format": "{format_source}",
         "format-source": "",
@@ -130,21 +122,21 @@
         "tooltip": true,
         "tooltip-format": " at {volume}%"
     },
-
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon}",
         "format-alt-click": "click-right",
         "format-alt": "{icon} {percent}%",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "format-icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
         "on-scroll-up": "~/.config/HyprV/waybar/scripts/brightness --inc",
         "on-scroll-down": "~/.config/HyprV/waybar/scripts/brightness --dec"
     },
-
     "tray": {
         "icon-size": 16,
         "spacing": 10
     }
-
 }
-
